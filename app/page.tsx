@@ -1,69 +1,71 @@
-import Image from "next/image";
+import brandData from "@/data/brand.json";
+import productsData from "@/data/products.json";
+import portfolioData from "@/data/portfolio.json";
+import reviewsData from "@/data/reviews.json";
+import sequenceData from "@/data/baking-sequence.json";
+import type { BakingSequence, Brand, PortfolioItem, Product, Review } from "@/types";
+import {
+  BakingSequence as BakingSequenceSection,
+  BrandIntro,
+  ClosingInvitation,
+  FeaturedProducts,
+  HeroScaleCake,
+  PortfolioPreview,
+} from "@/components/landing";
+import { ReviewMarquee } from "@/components/reviews";
 
-export default function Home() {
+const brand = brandData as Brand;
+const products = productsData as Product[];
+const portfolio = portfolioData as PortfolioItem[];
+const reviews = reviewsData as Review[];
+const sequence = sequenceData as BakingSequence;
+
+const featured = [...products].sort((a, b) => b.popularity - a.popularity).slice(0, 4);
+const preview = portfolio.slice(0, 6);
+
+export default function LandingPage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      <HeroScaleCake
+        headline={brand.heroHeadline}
+        subtext={brand.heroSubtext}
+        image={brand.heroImage}
+        handoffFrame={sequence.frames[0]}
+        ctaHref="/shop"
+        ctaLabel="Browse the cakes"
+      />
+
+      <BakingSequenceSection sequence={sequence} />
+
+      <BrandIntro
+        baker={brand.baker}
+        intro={brand.intro}
+        philosophy={brand.philosophy}
+        portrait={brand.portrait}
+      />
+
+      <FeaturedProducts products={featured} heading="On the shelf this month" />
+
+      <PortfolioPreview
+        items={preview}
+        heading="Cakes that have already left the kitchen"
+        body="Twelve pieces from the last two years, each one made for a specific table on a specific day."
+      />
+
+      <section className="py-section-sm md:py-section">
+        <div className="mx-auto w-full max-w-[86rem] px-gutter md:px-10">
+          <h2 className="max-w-[16ch] font-display text-title">What people said afterwards</h2>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="mt-14">
+          <ReviewMarquee reviews={reviews} />
         </div>
-      </main>
-    </div>
+      </section>
+
+      <ClosingInvitation
+        heading="Tell Nowa what the day is for."
+        body="Custom orders begin with a conversation about the occasion, the number of people, and what everyone actually likes to eat. Ready cakes need four days, tiered cakes need ten."
+        email={brand.contact.email}
+      />
+    </>
   );
 }

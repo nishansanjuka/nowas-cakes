@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Nowa's Cakes
 
-## Getting Started
-
-First, run the development server:
+The UI layer for a cake shop that is also the portfolio of the baker who makes them.
+Next.js App Router, TypeScript strict, Tailwind CSS v4, Motion for transitions and
+scroll linked animation, Lenis for smooth scrolling.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install && npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## What this is, and what it is not
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This is the interface only. There are no API routes, no server actions, no database,
+no auth and no payment logic, by design. Everything on screen comes from local JSON in
+[`data/`](data), typed through [`types/`](types), and read by pages which pass it down
+as props. Components never import data themselves.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The cart lives in a client side React Context and is held in memory, so it empties on
+reload. Checkout is a form that validates and shows a placeholder result; nothing is
+sent anywhere and nothing is charged.
 
-## Learn More
+## Where things live
 
-To learn more about Next.js, take a look at the following resources:
+| Path | What it holds |
+| --- | --- |
+| [`app/`](app) | Routes: landing, shop, product, cart, checkout, portfolio, about |
+| [`components/`](components) | `ui/` primitives, then one folder per surface |
+| [`hooks/`](hooks) | All scroll and motion logic, kept out of components |
+| [`lib/motion.ts`](lib/motion.ts) | Every duration, easing and spring in the app |
+| [`app/globals.css`](app/globals.css) | Every colour, radius, type step and spacing token |
+| [`data/`](data) | Eight products, twelve portfolio pieces, six reviews, the sequence |
+| [`DESIGN.md`](DESIGN.md) | The visual system, written from what was built |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## The placeholder images
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Every file under `public/` is a generated stand in for Nowa's real photography, written
+by [`scripts/generate-placeholders.mjs`](scripts/generate-placeholders.mjs) from the
+paths named in `data/`. To put real pictures in, replace the files at those paths and
+delete the script. The landing sequence expects 64 frames at
+`public/frames/frame-001.png` through `frame-064.png`, in playback order; a frame that
+fails to load is painted over with the neutral fallback colour from
+`data/baking-sequence.json` rather than leaving a hole.
 
-## Deploy on Vercel
+## Motion
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The landing page is one scroll instrument in two movements. The hero cake scales until
+it fills the viewport while the words step back, cross fades into the first frame of
+the baking sequence, and the sequence is then scrubbed frame by frame on a canvas
+driven by `useMotionValueEvent` and `requestAnimationFrame`. React state is never
+written per frame, nothing listens to the `scroll` event, and only `transform` and
+`opacity` animate.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Under `prefers-reduced-motion` both sequences are replaced: the hero becomes a static
+image and the bake becomes an ordinary list of its eight steps.

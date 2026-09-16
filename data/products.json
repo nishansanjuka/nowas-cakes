@@ -1,0 +1,242 @@
+[
+  {
+    "id": "p-vanilla-bean",
+    "slug": "vanilla-bean-celebration",
+    "name": "Vanilla Bean Celebration",
+    "categoryId": "celebration",
+    "tagline": "Three layers, split pods, nothing hidden.",
+    "description": "Madagascan vanilla pods are split and steeped in cream overnight, then folded through a sponge that stays pale on purpose. Finished in a buttercream soft enough to spread with the back of a spoon. This is the cake people order when they want the room to go quiet for a second.",
+    "basePrice": 74,
+    "currency": "USD",
+    "servesFrom": 8,
+    "servesTo": 24,
+    "leadTimeDays": 4,
+    "images": [
+      { "src": "/images/products/vanilla-bean-1.png", "alt": "Pale vanilla layer cake finished in soft buttercream, whole" },
+      { "src": "/images/products/vanilla-bean-2.png", "alt": "A cut slice of the vanilla cake showing three even layers" },
+      { "src": "/images/products/vanilla-bean-3.png", "alt": "The top of the vanilla cake, swept smooth with a palette knife" }
+    ],
+    "sizes": [
+      { "id": "six", "label": "Six inch", "priceDelta": 0, "note": "Serves 8" },
+      { "id": "eight", "label": "Eight inch", "priceDelta": 28, "note": "Serves 14" },
+      { "id": "ten", "label": "Ten inch", "priceDelta": 58, "note": "Serves 24" }
+    ],
+    "flavors": [
+      { "id": "classic", "label": "Vanilla bean", "priceDelta": 0 },
+      { "id": "raspberry", "label": "Vanilla and raspberry", "priceDelta": 6 },
+      { "id": "brownbutter", "label": "Brown butter vanilla", "priceDelta": 8 }
+    ],
+    "popularity": 96,
+    "addedOn": "2024-03-12"
+  },
+  {
+    "id": "p-dark-chocolate",
+    "slug": "dark-chocolate-ganache",
+    "name": "Dark Chocolate Ganache",
+    "categoryId": "celebration",
+    "tagline": "Bitter, wet, barely sweet.",
+    "description": "A sponge built on seventy percent couverture and hot coffee, layered with ganache whipped only to the point where it holds. It slumps a little on a warm day, which is the correct behaviour for chocolate and not a fault.",
+    "basePrice": 82,
+    "currency": "USD",
+    "servesFrom": 8,
+    "servesTo": 24,
+    "leadTimeDays": 4,
+    "images": [
+      { "src": "/images/products/dark-chocolate-1.png", "alt": "Dark chocolate cake covered in a glossy ganache" },
+      { "src": "/images/products/dark-chocolate-2.png", "alt": "A slice of the chocolate cake on a small plate" },
+      { "src": "/images/products/dark-chocolate-3.png", "alt": "Ganache being poured over the chilled cake" }
+    ],
+    "sizes": [
+      { "id": "six", "label": "Six inch", "priceDelta": 0, "note": "Serves 8" },
+      { "id": "eight", "label": "Eight inch", "priceDelta": 28, "note": "Serves 14" },
+      { "id": "ten", "label": "Ten inch", "priceDelta": 58, "note": "Serves 24" }
+    ],
+    "flavors": [
+      { "id": "plain", "label": "Dark chocolate", "priceDelta": 0 },
+      { "id": "salt", "label": "Chocolate and sea salt", "priceDelta": 5 },
+      { "id": "orange", "label": "Chocolate and blood orange", "priceDelta": 9 }
+    ],
+    "popularity": 91,
+    "addedOn": "2024-05-02"
+  },
+  {
+    "id": "p-lemon-elderflower",
+    "slug": "lemon-and-elderflower",
+    "name": "Lemon and Elderflower",
+    "categoryId": "wedding",
+    "tagline": "Sharp enough to wake a room.",
+    "description": "Zest goes into the sugar the night before so the oils have somewhere to go. Elderflower cordial is brushed on while the sponge is still warm, and the curd between the layers is made with whole lemons, pith included, for the bitterness.",
+    "basePrice": 88,
+    "currency": "USD",
+    "servesFrom": 14,
+    "servesTo": 60,
+    "leadTimeDays": 10,
+    "images": [
+      { "src": "/images/products/lemon-elderflower-1.png", "alt": "A two tier lemon cake in pale ivory buttercream" },
+      { "src": "/images/products/lemon-elderflower-2.png", "alt": "Lemon curd being spread across a sponge layer" },
+      { "src": "/images/products/lemon-elderflower-3.png", "alt": "The finished tiers seen from above on a linen cloth" }
+    ],
+    "sizes": [
+      { "id": "eight", "label": "Eight inch", "priceDelta": 0, "note": "Serves 14" },
+      { "id": "twotier", "label": "Two tier", "priceDelta": 96, "note": "Serves 35" },
+      { "id": "threetier", "label": "Three tier", "priceDelta": 210, "note": "Serves 60" }
+    ],
+    "flavors": [
+      { "id": "elderflower", "label": "Lemon and elderflower", "priceDelta": 0 },
+      { "id": "thyme", "label": "Lemon and thyme", "priceDelta": 6 },
+      { "id": "poppy", "label": "Lemon and poppy seed", "priceDelta": 4 }
+    ],
+    "popularity": 88,
+    "addedOn": "2024-01-20"
+  },
+  {
+    "id": "p-pistachio-rose",
+    "slug": "pistachio-rose",
+    "name": "Pistachio Rose",
+    "categoryId": "celebration",
+    "tagline": "Ground that morning, never a paste from a jar.",
+    "description": "Sicilian pistachios go through the mill the morning of the bake, which is the whole reason this one tastes green rather than beige. Rose water is used with restraint, one teaspoon in the syrup, so it reads as perfume at the back rather than soap at the front.",
+    "basePrice": 92,
+    "currency": "USD",
+    "servesFrom": 8,
+    "servesTo": 24,
+    "leadTimeDays": 5,
+    "images": [
+      { "src": "/images/products/pistachio-rose-1.png", "alt": "Pistachio cake finished in pale green buttercream with chopped nuts at the base" },
+      { "src": "/images/products/pistachio-rose-2.png", "alt": "A slice showing the green crumb of the pistachio sponge" },
+      { "src": "/images/products/pistachio-rose-3.png", "alt": "Pistachios being ground in a small mill" }
+    ],
+    "sizes": [
+      { "id": "six", "label": "Six inch", "priceDelta": 0, "note": "Serves 8" },
+      { "id": "eight", "label": "Eight inch", "priceDelta": 30, "note": "Serves 14" },
+      { "id": "ten", "label": "Ten inch", "priceDelta": 62, "note": "Serves 24" }
+    ],
+    "flavors": [
+      { "id": "rose", "label": "Pistachio and rose", "priceDelta": 0 },
+      { "id": "cardamom", "label": "Pistachio and cardamom", "priceDelta": 5 },
+      { "id": "cherry", "label": "Pistachio and sour cherry", "priceDelta": 8 }
+    ],
+    "popularity": 84,
+    "addedOn": "2024-07-08"
+  },
+  {
+    "id": "p-salted-caramel",
+    "slug": "salted-caramel-layer",
+    "name": "Salted Caramel Layer",
+    "categoryId": "celebration",
+    "tagline": "Taken to the edge of burnt, then stopped.",
+    "description": "The caramel is cooked until it smells like it has gone too far, then pulled off the heat and opened up with cream and flaky salt. Four thin sponges instead of three, so there is more caramel per mouthful than cake.",
+    "basePrice": 79,
+    "currency": "USD",
+    "servesFrom": 8,
+    "servesTo": 24,
+    "leadTimeDays": 4,
+    "images": [
+      { "src": "/images/products/salted-caramel-1.png", "alt": "Caramel layer cake with sauce running down one side" },
+      { "src": "/images/products/salted-caramel-2.png", "alt": "A slice showing four thin sponge layers and caramel between them" },
+      { "src": "/images/products/salted-caramel-3.png", "alt": "Flaky salt being scattered over warm caramel" }
+    ],
+    "sizes": [
+      { "id": "six", "label": "Six inch", "priceDelta": 0, "note": "Serves 8" },
+      { "id": "eight", "label": "Eight inch", "priceDelta": 28, "note": "Serves 14" },
+      { "id": "ten", "label": "Ten inch", "priceDelta": 58, "note": "Serves 24" }
+    ],
+    "flavors": [
+      { "id": "salted", "label": "Salted caramel", "priceDelta": 0 },
+      { "id": "pecan", "label": "Caramel and toasted pecan", "priceDelta": 7 },
+      { "id": "banana", "label": "Caramel and banana", "priceDelta": 5 }
+    ],
+    "popularity": 90,
+    "addedOn": "2024-04-18"
+  },
+  {
+    "id": "p-red-velvet",
+    "slug": "red-velvet-classic",
+    "name": "Red Velvet Classic",
+    "categoryId": "everyday",
+    "tagline": "Buttermilk, cocoa, and a colour that stays honest.",
+    "description": "Very little cocoa, a lot of buttermilk, and beetroot for the colour rather than a bottle of dye. The cream cheese frosting is slackened with sour cream so it does not set hard in the fridge and can be cut with a normal knife.",
+    "basePrice": 68,
+    "currency": "USD",
+    "servesFrom": 8,
+    "servesTo": 14,
+    "leadTimeDays": 3,
+    "images": [
+      { "src": "/images/products/red-velvet-1.png", "alt": "Red velvet cake with a thick cream cheese finish" },
+      { "src": "/images/products/red-velvet-2.png", "alt": "A slice of red velvet showing the deep crumb colour" },
+      { "src": "/images/products/red-velvet-3.png", "alt": "Cream cheese frosting being swept around the side of the cake" }
+    ],
+    "sizes": [
+      { "id": "six", "label": "Six inch", "priceDelta": 0, "note": "Serves 8" },
+      { "id": "eight", "label": "Eight inch", "priceDelta": 26, "note": "Serves 14" },
+      { "id": "loaf", "label": "Loaf", "priceDelta": -18, "note": "Serves 6" }
+    ],
+    "flavors": [
+      { "id": "classic", "label": "Classic red velvet", "priceDelta": 0 },
+      { "id": "vanillacream", "label": "Red velvet and vanilla cream", "priceDelta": 4 },
+      { "id": "cocoanib", "label": "Red velvet and cocoa nib", "priceDelta": 6 }
+    ],
+    "popularity": 76,
+    "addedOn": "2023-11-30"
+  },
+  {
+    "id": "p-coconut-passionfruit",
+    "slug": "coconut-passionfruit",
+    "name": "Coconut Passionfruit",
+    "categoryId": "seasonal",
+    "tagline": "Made while the fruit is wrinkled and ready.",
+    "description": "Passionfruit is only worth using when the skin has gone wrinkled, so this one appears and disappears with the crates at the market. Coconut sponge, passionfruit curd, and toasted coconut pressed around the base while the buttercream is still tacky.",
+    "basePrice": 86,
+    "currency": "USD",
+    "servesFrom": 8,
+    "servesTo": 24,
+    "leadTimeDays": 6,
+    "images": [
+      { "src": "/images/products/coconut-passionfruit-1.png", "alt": "Coconut cake with toasted flakes pressed around the base" },
+      { "src": "/images/products/coconut-passionfruit-2.png", "alt": "Passionfruit curd spooned onto a coconut sponge" },
+      { "src": "/images/products/coconut-passionfruit-3.png", "alt": "Halved passionfruit beside the finished cake" }
+    ],
+    "sizes": [
+      { "id": "six", "label": "Six inch", "priceDelta": 0, "note": "Serves 8" },
+      { "id": "eight", "label": "Eight inch", "priceDelta": 30, "note": "Serves 14" },
+      { "id": "ten", "label": "Ten inch", "priceDelta": 60, "note": "Serves 24" }
+    ],
+    "flavors": [
+      { "id": "passionfruit", "label": "Coconut and passionfruit", "priceDelta": 0 },
+      { "id": "mango", "label": "Coconut and mango", "priceDelta": 5 },
+      { "id": "lime", "label": "Coconut and lime leaf", "priceDelta": 7 }
+    ],
+    "popularity": 71,
+    "addedOn": "2025-01-15"
+  },
+  {
+    "id": "p-earl-grey-fig",
+    "slug": "earl-grey-and-fig",
+    "name": "Earl Grey and Fig",
+    "categoryId": "seasonal",
+    "tagline": "Steeped for four minutes, never five.",
+    "description": "Leaves steep in warm cream for exactly four minutes, long enough for the bergamot and short of the tannin. Figs are roasted with a little honey until they collapse, then spooned between the layers so each slice gets a whole one somewhere.",
+    "basePrice": 84,
+    "currency": "USD",
+    "servesFrom": 8,
+    "servesTo": 14,
+    "leadTimeDays": 5,
+    "images": [
+      { "src": "/images/products/earl-grey-fig-1.png", "alt": "Earl Grey cake topped with halved roasted figs" },
+      { "src": "/images/products/earl-grey-fig-2.png", "alt": "A slice showing roasted fig between the sponge layers" },
+      { "src": "/images/products/earl-grey-fig-3.png", "alt": "Tea leaves steeping in a jug of warm cream" }
+    ],
+    "sizes": [
+      { "id": "six", "label": "Six inch", "priceDelta": 0, "note": "Serves 8" },
+      { "id": "eight", "label": "Eight inch", "priceDelta": 29, "note": "Serves 14" },
+      { "id": "loaf", "label": "Loaf", "priceDelta": -20, "note": "Serves 6" }
+    ],
+    "flavors": [
+      { "id": "fig", "label": "Earl Grey and fig", "priceDelta": 0 },
+      { "id": "plum", "label": "Earl Grey and damson", "priceDelta": 5 },
+      { "id": "honey", "label": "Earl Grey and honey", "priceDelta": 4 }
+    ],
+    "popularity": 64,
+    "addedOn": "2025-02-09"
+  }
+]

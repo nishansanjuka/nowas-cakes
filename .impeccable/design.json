@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-16T00:00:00Z",
+  "title": "Design System: Nowa's Cakes",
+  "extensions": {
+    "colorMeta": {
+      "cream": {
+        "role": "neutral",
+        "displayName": "Unbleached Cream",
+        "canonical": "#fbf8f4",
+        "tonalRamp": ["#2b2523", "#4a4038", "#6b5f58", "#8d8177", "#b3a89c", "#ded3c8", "#f3ece4", "#fbf8f4"]
+      },
+      "sand": {
+        "role": "neutral",
+        "displayName": "Fine Sand",
+        "canonical": "#f3ece4",
+        "tonalRamp": ["#2a231d", "#463b31", "#645547", "#867561", "#ab9a86", "#cfc2b1", "#e7ddd0", "#f3ece4"]
+      },
+      "shell": {
+        "role": "neutral",
+        "displayName": "Shell",
+        "canonical": "#ede3d9",
+        "tonalRamp": ["#2a2019", "#463829", "#64513c", "#866f55", "#ab9377", "#cfba9f", "#e0d0c0", "#ede3d9"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Warm Charcoal",
+        "canonical": "#2b2523",
+        "tonalRamp": ["#141110", "#1f1b19", "#2b2523", "#453c38", "#6b5f58", "#9b8d84", "#c9bdb4", "#eee7e1"]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Tinted Soft Ink",
+        "canonical": "#6b5f58",
+        "tonalRamp": ["#1a1614", "#2b2523", "#433b36", "#6b5f58", "#8d8078", "#b0a49c", "#d2c8c1", "#f0ebe7"]
+      },
+      "ink-line": {
+        "role": "neutral",
+        "displayName": "Line Sand",
+        "canonical": "#ded3c8",
+        "tonalRamp": ["#251f19", "#3e352c", "#584c40", "#7a6b5b", "#a1917f", "#c4b5a4", "#ded3c8", "#f2ece5"]
+      },
+      "blush": {
+        "role": "primary",
+        "displayName": "Muted Blush",
+        "canonical": "#d6a9a0",
+        "tonalRamp": ["#2e1a16", "#4c2a23", "#6c3c33", "#8d5246", "#ad6f62", "#c68f83", "#d6a9a0", "#ecd5cf"]
+      },
+      "blush-soft": {
+        "role": "primary",
+        "displayName": "Soft Blush",
+        "canonical": "#ecd5cf",
+        "tonalRamp": ["#33201c", "#52332c", "#71483f", "#8f6155", "#ab7f73", "#c7a094", "#dcc0b8", "#ecd5cf"]
+      },
+      "blush-deep": {
+        "role": "primary",
+        "displayName": "Deep Clay Rose",
+        "canonical": "#9a5346",
+        "tonalRamp": ["#2b1310", "#48221c", "#66332a", "#82443a", "#9a5346", "#bb7466", "#d69c90", "#efd2cb"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The landing headline and the closing invitation. One per page at most." },
+      "headline": { "displayName": "Headline", "purpose": "Page titles and the opening line of a section." },
+      "title": { "displayName": "Title", "purpose": "Subsection headings and panel titles." },
+      "body": { "displayName": "Body", "purpose": "All running text. Measure capped at 68ch." },
+      "label": { "displayName": "Label", "purpose": "Uppercase tracked field labels, step names and meta lines." }
+    },
+    "shadows": [
+      { "name": "lift", "value": "0 18px 48px -24px rgb(43 37 35 / 0.28)", "purpose": "Elements that genuinely leave the page plane. Offset plus soft blur, never a zero offset halo." },
+      { "name": "drawer", "value": "-24px 0 64px -32px rgb(43 37 35 / 0.32)", "purpose": "The left edge of the cart drawer only." }
+    ],
+    "motion": [
+      { "name": "ease-out-soft", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "The house curve. Fast departure, long settle. Every entrance and every scroll linked fade." },
+      { "name": "ease-out-quiet", "value": "cubic-bezier(0.33, 1, 0.68, 1)", "purpose": "Small controls: chips, buttons, field grounds." },
+      { "name": "ease-in-out-soft", "value": "cubic-bezier(0.65, 0, 0.35, 1)", "purpose": "Things that leave the way they arrived." },
+      { "name": "duration-fast", "value": "180ms", "purpose": "Hover and press feedback." },
+      { "name": "duration-base", "value": "320ms", "purpose": "Cross fades, filter swaps, gallery changes." },
+      { "name": "duration-slow", "value": "620ms", "purpose": "Scroll entrances." },
+      { "name": "duration-drape", "value": "900ms", "purpose": "The hero's opening stagger." },
+      { "name": "duration-marquee", "value": "78s", "purpose": "One pass of the reviews marquee, roughly 35px per second. Pauses on hover and focus." },
+      { "name": "spring-settle", "value": "stiffness 210, damping 30, mass 0.9", "purpose": "Cart drawer travel. Critically damped, never overshoots." },
+      { "name": "spring-drape", "value": "stiffness 140, damping 26, mass 1", "purpose": "Large surfaces that need a slower settle." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "container", "value": "86rem" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one call to action on a surface. Charcoal ground, cream text, press scales.",
+      "html": "<button class=\"ds-btn-primary\">Browse the cakes</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 1.75rem; background: var(--color-ink, #2b2523); color: var(--color-cream, #fbf8f4); font-family: 'Hanken Grotesk', 'Avenir Next', sans-serif; font-size: 0.9375rem; border: none; border-radius: 8px; cursor: pointer; transition: background-color 180ms cubic-bezier(0.33,1,0.68,1), transform 180ms cubic-bezier(0.33,1,0.68,1); } .ds-btn-primary:hover { background: #3b3431; } .ds-btn-primary:active { transform: scale(0.99); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-blush-deep, #9a5346); outline-offset: 3px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "The quieter partner action. Shell ground that warms to blush on hover.",
+      "html": "<button class=\"ds-btn-secondary\">More about Nowa</button>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; height: 48px; padding: 0 1.75rem; background: var(--color-shell, #ede3d9); color: var(--color-ink, #2b2523); font-family: 'Hanken Grotesk', 'Avenir Next', sans-serif; font-size: 0.9375rem; border: none; border-radius: 8px; cursor: pointer; transition: background-color 180ms cubic-bezier(0.33,1,0.68,1), transform 180ms cubic-bezier(0.33,1,0.68,1); } .ds-btn-secondary:hover { background: var(--color-blush-soft, #ecd5cf); } .ds-btn-secondary:active { transform: scale(0.99); } .ds-btn-secondary:focus-visible { outline: 2px solid var(--color-blush-deep, #9a5346); outline-offset: 3px; }"
+    },
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "chip-filter",
+      "description": "Category filters on the shop and portfolio. The selected chip inverts.",
+      "html": "<div class=\"ds-chip-row\"><button class=\"ds-chip ds-chip-selected\" aria-pressed=\"true\">Everything</button><button class=\"ds-chip\" aria-pressed=\"false\">Wedding</button><button class=\"ds-chip\" aria-pressed=\"false\">Seasonal</button></div>",
+      "css": ".ds-chip-row { display: flex; gap: 0.5rem; } .ds-chip { padding: 0.5rem 1rem; border: none; border-radius: 999px; background: var(--color-sand, #f3ece4); color: var(--color-ink-soft, #6b5f58); font-family: 'Hanken Grotesk', 'Avenir Next', sans-serif; font-size: 0.9375rem; cursor: pointer; transition: background-color 180ms cubic-bezier(0.33,1,0.68,1), color 180ms cubic-bezier(0.33,1,0.68,1); } .ds-chip:hover { background: var(--color-shell, #ede3d9); color: var(--color-ink, #2b2523); } .ds-chip-selected, .ds-chip-selected:hover { background: var(--color-ink, #2b2523); color: var(--color-cream, #fbf8f4); } .ds-chip:focus-visible { outline: 2px solid var(--color-blush-deep, #9a5346); outline-offset: 3px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Sand ground, no stroke, uppercase tracked label above it.",
+      "html": "<div class=\"ds-field\"><label class=\"ds-field-label\" for=\"ds-email\">Email</label><input class=\"ds-field-input\" id=\"ds-email\" type=\"email\" placeholder=\"you@example.com\"><p class=\"ds-field-hint\">Nowa confirms the date here.</p></div>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 0.5rem; font-family: 'Hanken Grotesk', 'Avenir Next', sans-serif; } .ds-field-label { font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-ink-soft, #6b5f58); } .ds-field-input { width: 100%; padding: 0.75rem 1rem; background: var(--color-sand, #f3ece4); color: var(--color-ink, #2b2523); border: none; border-radius: 8px; font-size: 1rem; transition: background-color 180ms cubic-bezier(0.33,1,0.68,1); } .ds-field-input::placeholder { color: rgb(107 95 88 / 0.75); } .ds-field-input:hover, .ds-field-input:focus { background: var(--color-shell, #ede3d9); } .ds-field-input:focus { outline: 2px solid var(--color-blush-deep, #9a5346); outline-offset: 3px; } .ds-field-hint { margin: 0; font-size: 0.8125rem; color: var(--color-ink-soft, #6b5f58); }"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "One 72px line. Serif wordmark, sans links, cart count last.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-nav-mark\" href=\"#\">Nowa's Cakes</a><nav class=\"ds-nav-links\"><a href=\"#\" class=\"ds-nav-link ds-nav-link-active\" aria-current=\"page\">Shop</a><a href=\"#\" class=\"ds-nav-link\">Portfolio</a><a href=\"#\" class=\"ds-nav-link\">About</a></nav><button class=\"ds-nav-cart\">Cart (1)</button></header>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 2rem; height: 72px; padding: 0 2.5rem; background: rgb(251 248 244 / 0.92); backdrop-filter: blur(10px); } .ds-nav-mark { font-family: 'Bodoni Moda', Georgia, serif; font-size: 1.35rem; letter-spacing: -0.02em; color: var(--color-ink, #2b2523); text-decoration: none; } .ds-nav-links { display: flex; gap: 2rem; margin-left: auto; } .ds-nav-link { font-family: 'Hanken Grotesk', 'Avenir Next', sans-serif; font-size: 0.9375rem; color: var(--color-ink-soft, #6b5f58); text-decoration: none; transition: color 180ms cubic-bezier(0.33,1,0.68,1); } .ds-nav-link:hover, .ds-nav-link-active { color: var(--color-ink, #2b2523); } .ds-nav-cart { background: none; border: none; font-family: 'Hanken Grotesk', 'Avenir Next', sans-serif; font-size: 0.9375rem; color: var(--color-ink-soft, #6b5f58); font-variant-numeric: tabular-nums; cursor: pointer; transition: color 180ms cubic-bezier(0.33,1,0.68,1); } .ds-nav-cart:hover { color: var(--color-ink, #2b2523); }"
+    },
+    {
+      "name": "Image Plate",
+      "kind": "card",
+      "refersTo": "plate-image",
+      "description": "Every picture in the system. One radius, sand underneath, label below and never over it.",
+      "html": "<figure class=\"ds-plate\"><div class=\"ds-plate-img\"></div><figcaption class=\"ds-plate-caption\"><span class=\"ds-plate-title\">Pistachio Rose</span><span class=\"ds-plate-meta\">from $92</span></figcaption></figure>",
+      "css": ".ds-plate { margin: 0; width: 260px; } .ds-plate-img { aspect-ratio: 4 / 5; border-radius: 14px; background: linear-gradient(160deg, #f3ece4, #d6a9a0); transition: transform 620ms cubic-bezier(0.16,1,0.3,1); } .ds-plate:hover .ds-plate-img { transform: scale(1.018); } .ds-plate-caption { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-top: 1rem; } .ds-plate-title { font-family: 'Bodoni Moda', Georgia, serif; font-size: 1.25rem; color: var(--color-ink, #2b2523); } .ds-plate-meta { font-family: 'Hanken Grotesk', 'Avenir Next', sans-serif; font-size: 1rem; color: var(--color-ink-soft, #6b5f58); font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Sequence Caption",
+      "kind": "custom",
+      "refersTo": "sequence-caption",
+      "description": "The step label that fades in and out with its frame range over the baking sequence.",
+      "html": "<div class=\"ds-caption\"><p class=\"ds-caption-step\">Frosting</p><p class=\"ds-caption-body\">Buttercream goes on warm and is pulled back with a palette knife until the sides go still.</p></div>",
+      "css": ".ds-caption { max-width: 42ch; padding: 1.25rem 1.5rem; border-radius: 14px; background: rgb(251 248 244 / 0.88); backdrop-filter: blur(6px); font-family: 'Hanken Grotesk', 'Avenir Next', sans-serif; } .ds-caption-step { margin: 0; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--color-blush-deep, #9a5346); } .ds-caption-body { margin: 0.5rem 0 0; font-size: 1.15rem; line-height: 1.55; color: var(--color-ink, #2b2523); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The North Light Kitchen",
+    "overview": "The system is a room with one window. Everything sits on a warm off-white ground the colour of unbleached paper, and the only things allowed to be loud are the photographs. There is no chrome competing with the food: no borders around content, no shadows under cards, no coloured panels calling for attention. What carries the design instead is the amount of air between things and the difference between a 62px Bodoni headline and a 13px tracked label. The interface is built to recede. Type sits in two registers only, a high contrast Didone for anything that speaks and a quiet humanist grotesque for anything that explains. Images are always plates: a single soft radius, cropped, with their label underneath rather than over them. Colour is almost absent, held back so that one muted blush can mean something when it appears on a rating, a step label or a selected control. The page's one piece of theatre is motion, and it is scroll driven rather than decorative: a cake that grows until it owns the viewport, then dissolves into the eight steps that made it. Nothing bounces, nothing overshoots, nothing moves that the reader did not move themselves.",
+    "keyCharacteristics": [
+      "Warm off-white ground, never white, never grey",
+      "One muted blush accent, deepened when it must carry text",
+      "High contrast serif display over a quiet grotesque body",
+      "One radius system, borrowed by every plate, control and panel",
+      "No borders on content and effectively no shadows",
+      "Asymmetric, unequal grids; whitespace is the layout",
+      "Light theme only, by lock"
+    ],
+    "rules": [
+      { "name": "The No Grey Rule", "body": "Secondary text is tinted from the ground's own hue (#6b5f58), never a neutral grey. A grey on this cream reads as a rendering fault.", "section": "colors" },
+      { "name": "The Accent Ceiling Rule", "body": "The blush family touches at most a few percent of any screen. If two blush elements are visible at once, one of them is decoration and should be removed.", "section": "colors" },
+      { "name": "The Deepen Before You Type Rule", "body": "#d6a9a0 is a surface value. The moment the accent has to carry a glyph or a word, it becomes #9a5346.", "section": "colors" },
+      { "name": "The Two Voices Rule", "body": "Serif speaks, sans explains. A serif never labels a control and a sans never carries a page's main statement.", "section": "typography" },
+      { "name": "The Two Line Headline Rule", "body": "The landing headline is allowed two lines at every breakpoint. If a copy change pushes it to three, the copy is wrong, not the type scale.", "section": "typography" },
+      { "name": "The Tabular Rule", "body": "Every price, quantity and count carries font-variant-numeric: tabular-nums, so numbers do not shuffle when they change.", "section": "typography" },
+      { "name": "The One Elevation Rule", "body": "A surface declares depth with a tone change or a shadow, never both. There are no bordered cards in this system, and no card sits inside another card.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do put every label under its image. A picture in this system is never printed on.",
+      "Do deepen the accent to #9a5346 before setting any word in it.",
+      "Do keep scroll position in useScroll and useTransform only, and map opacity through a function rather than a keyframe range so Motion does not promote it to its own scroll timeline.",
+      "Do size sticky sections in svh.",
+      "Do give every image plate a sand ground underneath it.",
+      "Do animate transform and opacity only, on the exponential ease out cubic-bezier(0.16, 1, 0.3, 1)."
+    ],
+    "donts": [
+      "Don't use an em dash or an en dash anywhere, including JSON data and alt text.",
+      "Don't add a scroll cue, a down arrow, a badge over an image, or a row of three equal cards.",
+      "Don't put a border and a shadow on the same surface, or a card inside a card.",
+      "Don't reach for grey. Secondary text is #6b5f58.",
+      "Don't use bounce or elastic easing, or a spring that overshoots.",
+      "Don't listen to the scroll event directly, and never set React state once per animation frame.",
+      "Don't introduce a dark theme. The page theme is locked to light."
+    ]
+  }
+}

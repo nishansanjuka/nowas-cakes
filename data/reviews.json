@@ -1,0 +1,62 @@
+[
+  {
+    "id": "r-01",
+    "name": "Marianne Okafor",
+    "avatar": { "src": "/images/reviews/marianne.png", "alt": "Portrait of Marianne" },
+    "rating": 5,
+    "cakeOrdered": "Lemon and Elderflower",
+    "occasion": "Wedding, sixty guests",
+    "text": "We asked for something sharp enough to cut through a long lunch and that is exactly what arrived. Three people asked for the recipe and Nowa very politely said no.",
+    "date": "2025-06-14"
+  },
+  {
+    "id": "r-02",
+    "name": "Theo Brandt",
+    "avatar": { "src": "/images/reviews/theo.png", "alt": "Portrait of Theo" },
+    "rating": 5,
+    "cakeOrdered": "Dark Chocolate Ganache",
+    "occasion": "Fortieth birthday",
+    "text": "I have eaten a lot of chocolate cake and most of it is sweet before it is anything else. This one was bitter first. My father, who never comments on food, went back for a second slice.",
+    "date": "2025-04-02"
+  },
+  {
+    "id": "r-03",
+    "name": "Priya Raman",
+    "avatar": { "src": "/images/reviews/priya.png", "alt": "Portrait of Priya" },
+    "rating": 5,
+    "cakeOrdered": "Pistachio Rose",
+    "occasion": "Anniversary dinner",
+    "text": "The rose is barely there, which is the whole point. It smells like a garden at the edge and tastes like pistachio in the middle. I have had the jarred kind and this is not that.",
+    "date": "2025-02-21"
+  },
+  {
+    "id": "r-04",
+    "name": "Sam Delacroix",
+    "avatar": { "src": "/images/reviews/sam.png", "alt": "Portrait of Sam" },
+    "rating": 4,
+    "cakeOrdered": "Salted Caramel Layer",
+    "occasion": "Office farewell",
+    "text": "Genuinely the best caramel I have had on a cake, cooked right to the edge. Four stars only because I wanted a bigger one and had to wait a week for the slot.",
+    "date": "2024-11-09"
+  },
+  {
+    "id": "r-05",
+    "name": "Ines Moreau",
+    "avatar": { "src": "/images/reviews/ines.png", "alt": "Portrait of Ines" },
+    "rating": 5,
+    "cakeOrdered": "Grandmother's Tin, custom",
+    "occasion": "Memorial lunch",
+    "text": "I brought Nowa my grandmother's cake tin and she baked in it. The cake came back in the tin, still warm at the centre. I did not expect to cry in a kitchen that day.",
+    "date": "2024-09-27"
+  },
+  {
+    "id": "r-06",
+    "name": "Daniel Osei",
+    "avatar": { "src": "/images/reviews/daniel.png", "alt": "Portrait of Daniel" },
+    "rating": 5,
+    "cakeOrdered": "Vanilla Bean Celebration",
+    "occasion": "Christening",
+    "text": "Vanilla usually means plain. This did not. You can see the seeds in the crumb and you can smell it before it reaches the table. We ordered the ten inch and there was nothing left.",
+    "date": "2024-07-05"
+  }
+]

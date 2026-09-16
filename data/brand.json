@@ -1,0 +1,48 @@
+{
+  "name": "Nowa's Cakes",
+  "baker": "Nowa Adeyemi",
+  "tagline": "Cakes made slowly, by one pair of hands.",
+  "heroHeadline": "Cakes made slowly, by one pair of hands.",
+  "heroSubtext": "Celebration and custom cakes baked to order in a small studio kitchen.",
+  "heroImage": {
+    "src": "/images/hero/finished-cake.png",
+    "alt": "A three layer cake finished in pale buttercream, set on a linen covered table"
+  },
+  "intro": "I am Nowa. I bake one cake at a time, in a studio kitchen with north light and a very old stand mixer.",
+  "bio": [
+    "I learned to bake in my grandmother's kitchen, where the oven ran hot on one side and everything had to be turned halfway through. She taught me that patience is an ingredient, and that a cake tastes like the attention you paid it.",
+    "After eleven years in restaurant pastry I wanted the opposite of service: fewer covers, longer hours with one cake, and the chance to speak to the person who would eat it. So I opened a studio kitchen with room for exactly one bake at a time.",
+    "Today I make around six cakes a week. Every one is mixed, baked, layered and finished by me, on the day it was promised, and I still turn the pans halfway through."
+  ],
+  "philosophy": "A cake should taste of the thing it is named after. Vanilla should smell like a split pod, lemon should make you close one eye. I buy fewer ingredients and better ones, I weigh everything, and I never decorate over a fault. If a layer is wrong it does not leave the kitchen.",
+  "portrait": {
+    "src": "/images/about/nowa-portrait.png",
+    "alt": "Nowa in her studio kitchen, sleeves rolled, resting one hand on a bowl of buttercream"
+  },
+  "contact": {
+    "email": "hello@nowascakes.example",
+    "phone": "+1 555 0142",
+    "studio": "14 Wheatsheaf Lane, Studio 3",
+    "hours": "Tuesday to Saturday, 9am to 4pm"
+  },
+  "socials": [
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "handle": "@nowascakes",
+      "href": "https://instagram.com/nowascakes"
+    },
+    {
+      "id": "pinterest",
+      "label": "Pinterest",
+      "handle": "Nowa's Cakes",
+      "href": "https://pinterest.com/nowascakes"
+    },
+    {
+      "id": "journal",
+      "label": "Journal",
+      "handle": "Notes from the kitchen",
+      "href": "https://nowascakes.example/journal"
+    }
+  ]
+}

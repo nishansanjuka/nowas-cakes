@@ -1,0 +1,122 @@
+[
+  {
+    "id": "w-01",
+    "title": "Ivory and Wheat",
+    "categoryId": "wedding",
+    "year": 2025,
+    "place": "Harrow Barn",
+    "story": "Three tiers finished in a buttercream left deliberately unsmoothed, with wheat cut that morning from the field behind the barn.",
+    "image": { "src": "/images/portfolio/ivory-and-wheat.png", "alt": "A three tier ivory wedding cake dressed with stems of wheat", "width": 1200, "height": 1600 },
+    "aspect": "tall"
+  },
+  {
+    "id": "w-02",
+    "title": "The Quiet Tier",
+    "categoryId": "wedding",
+    "year": 2024,
+    "place": "Marlow House",
+    "story": "Two tiers for sixty people who wanted no flowers at all, so the surface does the work instead.",
+    "image": { "src": "/images/portfolio/the-quiet-tier.png", "alt": "A two tier white wedding cake with a plain swept surface", "width": 1200, "height": 1200 },
+    "aspect": "square"
+  },
+  {
+    "id": "w-03",
+    "title": "Olive and Salt",
+    "categoryId": "wedding",
+    "year": 2024,
+    "place": "Coastal, near Fowey",
+    "story": "Olive oil sponge for a windy cliff top, because butter sets hard and olive oil does not.",
+    "image": { "src": "/images/portfolio/olive-and-salt.png", "alt": "A single tier olive oil cake on a table with the sea behind it", "width": 1600, "height": 1100 },
+    "aspect": "wide"
+  },
+  {
+    "id": "b-01",
+    "title": "Forty, Loudly",
+    "categoryId": "birthday",
+    "year": 2025,
+    "place": "Studio kitchen",
+    "story": "Passionfruit and coconut for someone who asked for the brightest thing I could make in February.",
+    "image": { "src": "/images/portfolio/forty-loudly.png", "alt": "A bright coconut and passionfruit birthday cake with toasted flakes", "width": 1200, "height": 1600 },
+    "aspect": "tall"
+  },
+  {
+    "id": "b-02",
+    "title": "Chocolate for Iris",
+    "categoryId": "birthday",
+    "year": 2024,
+    "place": "Kentish Town",
+    "story": "A seventh birthday, and the only brief was that it had to be so dark it looked like soil.",
+    "image": { "src": "/images/portfolio/chocolate-for-iris.png", "alt": "A very dark chocolate birthday cake with a single candle", "width": 1200, "height": 1200 },
+    "aspect": "square"
+  },
+  {
+    "id": "b-03",
+    "title": "Nine Candles",
+    "categoryId": "birthday",
+    "year": 2023,
+    "place": "Studio kitchen",
+    "story": "Strawberries folded through the buttercream so the whole thing went faintly pink on its own.",
+    "image": { "src": "/images/portfolio/nine-candles.png", "alt": "A pale pink strawberry cake with nine thin candles", "width": 1600, "height": 1100 },
+    "aspect": "wide"
+  },
+  {
+    "id": "c-01",
+    "title": "The Letter Cake",
+    "categoryId": "custom",
+    "year": 2025,
+    "place": "Commissioned",
+    "story": "The brief arrived as a handwritten letter, and the piping copies the sender's own hand from it.",
+    "image": { "src": "/images/portfolio/the-letter-cake.png", "alt": "A cake piped with handwriting across the top surface", "width": 1200, "height": 1600 },
+    "aspect": "tall"
+  },
+  {
+    "id": "c-02",
+    "title": "Blue Hour",
+    "categoryId": "custom",
+    "year": 2024,
+    "place": "Commissioned",
+    "story": "Buttercream mixed in nine shades and blended on the cake itself, working from the base upward.",
+    "image": { "src": "/images/portfolio/blue-hour.png", "alt": "A cake finished in blended blue buttercream shading from dark to pale", "width": 1200, "height": 1200 },
+    "aspect": "square"
+  },
+  {
+    "id": "c-03",
+    "title": "Grandmother's Tin",
+    "categoryId": "custom",
+    "year": 2023,
+    "place": "Commissioned",
+    "story": "Baked in the client's grandmother's own tin, which she brought to the studio wrapped in a tea towel.",
+    "image": { "src": "/images/portfolio/grandmothers-tin.png", "alt": "A square cake baked in an old family tin, still in the tin", "width": 1600, "height": 1100 },
+    "aspect": "wide"
+  },
+  {
+    "id": "s-01",
+    "title": "Rhubarb, Forced",
+    "categoryId": "seasonal",
+    "year": 2025,
+    "place": "Studio kitchen",
+    "story": "Made in the three weeks when forced rhubarb is that impossible pink, and not one week either side.",
+    "image": { "src": "/images/portfolio/rhubarb-forced.png", "alt": "A cake topped with poached pink rhubarb batons", "width": 1200, "height": 1600 },
+    "aspect": "tall"
+  },
+  {
+    "id": "s-02",
+    "title": "Late Figs",
+    "categoryId": "seasonal",
+    "year": 2024,
+    "place": "Studio kitchen",
+    "story": "The last crate of the year, roasted with honey until they gave up and collapsed.",
+    "image": { "src": "/images/portfolio/late-figs.png", "alt": "An Earl Grey cake crowned with roasted figs", "width": 1200, "height": 1200 },
+    "aspect": "square"
+  },
+  {
+    "id": "s-03",
+    "title": "Quince in November",
+    "categoryId": "seasonal",
+    "year": 2023,
+    "place": "Studio kitchen",
+    "story": "Quince poached for four hours until it turned the colour of old brick, then laid in a single overlapping ring.",
+    "image": { "src": "/images/portfolio/quince-in-november.png", "alt": "A cake ringed with slices of deep amber poached quince", "width": 1600, "height": 1100 },
+    "aspect": "wide"
+  }
+]

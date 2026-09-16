@@ -1,26 +1,172 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ---------------------------------------------------------------------------
+   Nowa's Cakes design tokens. Every colour, radius, type step, spacing step
+   and motion value used anywhere in the app is declared here. Components never
+   carry raw values.
+   Light theme only by design lock: there is no dark variant.
+--------------------------------------------------------------------------- */
+
+@theme {
+  /* Ground and surfaces */
+  --color-cream: #fbf8f4;
+  --color-sand: #f3ece4;
+  --color-shell: #ede3d9;
+
+  /* Ink. Warm charcoal, never pure black, never neutral grey. */
+  --color-ink: #2b2523;
+  --color-ink-soft: #6b5f58;
+  --color-ink-line: #ded3c8;
+
+  /* The single muted accent, plus the deepened value that carries text. */
+  --color-blush: #d6a9a0;
+  --color-blush-soft: #ecd5cf;
+  --color-blush-deep: #9a5346;
+
+  /* Typefaces. Bodoni Moda carries an optical size axis, so one family covers
+     an 88px headline and a 13px caption without a second display face. */
+  --font-display: var(--font-bodoni), "Iowan Old Style", Georgia, serif;
+  --font-sans: var(--font-hanken), "Avenir Next", "Segoe UI", sans-serif;
+
+  /* Type scale */
+  --text-display: clamp(1.95rem, 5.6vw, 3.9rem);
+  --text-display--line-height: 1.05;
+  --text-display--letter-spacing: -0.025em;
+  --text-title: clamp(2.2rem, 4.2vw, 3.4rem);
+  --text-title--line-height: 1.06;
+  --text-title--letter-spacing: -0.02em;
+  --text-heading: clamp(1.55rem, 2.6vw, 2.05rem);
+  --text-heading--line-height: 1.14;
+  --text-heading--letter-spacing: -0.015em;
+  --text-panel: 1.5rem;
+  --text-panel--line-height: 1.2;
+  --text-panel--letter-spacing: -0.012em;
+  --text-quote: 1.3125rem;
+  --text-quote--line-height: 1.45;
+  --text-card: 1.25rem;
+  --text-card--line-height: 1.3;
+  --text-lead: clamp(1.05rem, 1.4vw, 1.25rem);
+  --text-lead--line-height: 1.55;
+  --text-control: 0.9375rem;
+  --text-control--line-height: 1.4;
+  --text-body: 1rem;
+  --text-body--line-height: 1.65;
+  --text-caption: 0.8125rem;
+  --text-caption--line-height: 1.5;
+  --text-caption--letter-spacing: 0.06em;
+
+  /* One radius system across the whole site */
+  --radius-plate: 14px;
+  --radius-control: 8px;
+  --radius-pill: 999px;
+
+  /* Vertical rhythm */
+  --spacing-section: 8.5rem;
+  --spacing-section-sm: 5rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-nav: 72px;
+
+  /* Motion. Mirrored in lib/motion.ts for the JS side. No bounce, no elastic. */
+  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quiet: cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-in-out-soft: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 180ms;
+  --duration-base: 320ms;
+  --duration-slow: 620ms;
+  --duration-drape: 900ms;
+  --duration-marquee: 78s;
+
+  /* The only two shadows in the system. Both carry offset and soft blur. */
+  --shadow-lift: 0 18px 48px -24px rgb(43 37 35 / 0.28);
+  --shadow-drawer: -24px 0 64px -32px rgb(43 37 35 / 0.32);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/* Browser surfaces we did not draw still belong to the design. These live in
+   the base layer so utility classes still win over them. */
+@layer base {
+  ::selection {
+    background: var(--color-blush-soft);
+    color: var(--color-ink);
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  html {
+    color-scheme: light;
+    caret-color: var(--color-blush-deep);
+    scrollbar-color: var(--color-ink-line) var(--color-cream);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background: var(--color-cream);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a,
+  button,
+  input,
+  select,
+  textarea {
+    font: inherit;
+    color: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-blush-deep);
+    outline-offset: 3px;
+    border-radius: var(--radius-control);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Lenis drives scrolling; these are the two rules it needs. */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Numerals in prices and quantities line up. */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* The reviews marquee. Transform only, and it holds still while anyone is
+   reading it, whether they arrived with a pointer or with the keyboard. */
+@keyframes marquee-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee-x var(--duration-marquee) linear infinite;
+}
+
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

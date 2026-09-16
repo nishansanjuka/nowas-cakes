@@ -1,0 +1,56 @@
+{
+  "shop": [
+    {
+      "id": "all",
+      "name": "Everything",
+      "blurb": "The full shelf, eight cakes baked to order."
+    },
+    {
+      "id": "celebration",
+      "name": "Celebration",
+      "blurb": "Layer cakes for the days that deserve one."
+    },
+    {
+      "id": "wedding",
+      "name": "Wedding",
+      "blurb": "Tiered cakes, tasted and agreed on before the day."
+    },
+    {
+      "id": "everyday",
+      "name": "Everyday",
+      "blurb": "Smaller cakes for a Tuesday with no occasion."
+    },
+    {
+      "id": "seasonal",
+      "name": "Seasonal",
+      "blurb": "Whatever the market had that week."
+    }
+  ],
+  "portfolio": [
+    {
+      "id": "all",
+      "name": "All work",
+      "blurb": "Twelve cakes from the last two years."
+    },
+    {
+      "id": "wedding",
+      "name": "Wedding",
+      "blurb": "Tiered, quiet, built to be carried."
+    },
+    {
+      "id": "birthday",
+      "name": "Birthday",
+      "blurb": "Loud flavours, calm surfaces."
+    },
+    {
+      "id": "custom",
+      "name": "Custom",
+      "blurb": "Briefs that arrived as a sketch or a story."
+    },
+    {
+      "id": "seasonal",
+      "name": "Seasonal",
+      "blurb": "Made around one ingredient at its best."
+    }
+  ]
+}
