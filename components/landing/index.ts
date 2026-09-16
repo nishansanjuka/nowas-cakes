@@ -1,7 +1,11 @@
-export { HeroScaleCake } from "./HeroScaleCake";
-export { BakingSequence } from "./BakingSequence";
-export { SequenceCanvas } from "./SequenceCanvas";
-export { SequenceCaption } from "./SequenceCaption";
+export { HeroAssembly } from "./HeroAssembly";
+export type { HeroAssemblyCopy } from "./HeroAssembly";
+export { AssemblyStage } from "./AssemblyStage";
+export { CakeLayerStack } from "./CakeLayerStack";
+export { CakeLayer } from "./CakeLayer";
+export { HeroIntro } from "./HeroIntro";
+export { StepList } from "./StepList";
+export { StepProgress } from "./StepProgress";
 export { BrandIntro } from "./BrandIntro";
 export { FeaturedProducts } from "./FeaturedProducts";
 export { PortfolioPreview } from "./PortfolioPreview";

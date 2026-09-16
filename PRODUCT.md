@@ -66,4 +66,4 @@ testimonials, customers, awards or press exist and none may be implied as real.
 ## Accessibility & Inclusion
 
 WCAG AA contrast, semantic HTML, alt text on every image, full keyboard navigation, and `prefers-reduced-motion`
-honored by replacing the scroll driven sequences with static images.
+honored by dropping the pin and showing the scroll driven sections already settled.

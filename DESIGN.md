@@ -14,7 +14,7 @@ colors:
 typography:
   display:
     fontFamily: "Bodoni Moda, Iowan Old Style, Georgia, serif"
-    fontSize: "clamp(1.95rem, 5.6vw, 3.9rem)"
+    fontSize: "clamp(1.65rem, 5.6vw, 3.9rem)"
     fontWeight: 400
     lineHeight: 1.05
     letterSpacing: "-0.025em"
@@ -149,7 +149,7 @@ The page's one piece of theatre is motion, and it is scroll driven rather than d
 A warm neutral field with a single desaturated rose running through it, tuned so that nothing on the page is pure black, pure white or neutral grey.
 
 ### Primary
-- **Muted Blush** (#d6a9a0): the one accent. Used on surfaces and marks, never on large type. It appears on rating glyphs, the active step label in the baking sequence, and small emphasis. Its rarity is the point.
+- **Muted Blush** (#d6a9a0): the one accent. Used on surfaces and marks, never on large type. It appears on rating glyphs and small emphasis. Its rarity is the point.
 - **Deep Clay Rose** (#9a5346): the blush taken down until it passes AA on the cream ground (5.4:1). Every piece of accent coloured text uses this value, never the blush itself.
 
 ### Neutral
@@ -176,16 +176,17 @@ A warm neutral field with a single desaturated rose running through it, tuned so
 **Character:** A high contrast Didone doing all the speaking, set against a humanist grotesque that never raises its voice. Bodoni Moda carries a real optical size axis, so the same family holds an 88px headline and a 20px caption without the thins collapsing; that axis is the reason no second display face exists here.
 
 ### Hierarchy
-- **Display** (400, clamp(1.95rem, 5.6vw, 3.9rem), 1.05, -0.025em): the landing headline and the closing invitation. One per page at most.
+- **Display** (400, clamp(1.65rem, 5.6vw, 3.9rem), 1.05, -0.025em): the landing headline and the closing invitation. One per page at most. The floor is set by the two line headline rule, not by taste.
 - **Headline** (400, clamp(2.2rem, 4.2vw, 3.4rem), 1.06, -0.02em): page titles and section openers.
 - **Title** (400, clamp(1.55rem, 2.6vw, 2.05rem), 1.14, -0.015em): subsection headings.
 - **Panel** (400, 1.5rem, 1.2, -0.012em): the serif number or name at the head of a panel. Drawer title, lightbox title, every subtotal and total.
 - **Quote** (400, 1.3125rem, 1.45): review text, the one place a serif carries a paragraph.
 - **Card** (400, 1.25rem, 1.3): the name under an image plate, the wordmark, a cart line's title.
-- **Lead** (400, clamp(1.05rem, 1.4vw, 1.25rem), 1.55): the sentence under a heading, and sequence captions.
+- **Lead** (400, clamp(1.05rem, 1.4vw, 1.25rem), 1.55): the sentence under a heading.
 - **Body** (400, 1rem, 1.65): all running text. Measure is capped between 34ch and 68ch depending on context; prose blocks never run wider than 68ch.
 - **Control** (400, 0.9375rem, 1.4): every button, link, chip and select. Controls have their own step so they stay a hair below body.
 - **Label** (400, 0.8125rem, 1.5, 0.12em, uppercase): field labels, step names, meta lines. Uppercase only at this size.
+- **Layer** (400, clamp(0.5rem, 3.8cqw, 0.9375rem), 1.1, 0.1em, uppercase): the material named inside a drawn cake layer. The only step measured against a container rather than the viewport, because the thinnest band must never carry type taller than itself.
 
 ### Named Rules
 
@@ -252,8 +253,10 @@ Borders are not part of the form language. The single exception is a 1px `#ded3c
 - **States:** inactive links are soft ink and move to charcoal on hover; the active route stays charcoal and carries `aria-current`.
 - **Mobile:** links collapse into a Menu control that opens a full screen cream panel, its items staggered in at 50ms intervals.
 
-### The Scroll Sequence
-The signature component, and the only place the system spends its motion budget. A sticky full viewport canvas plays 64 preloaded frames scrubbed directly by scroll progress, with a caption panel that fades between the eight named steps. Frames are drawn inside a requestAnimationFrame callback fed by a motion value subscription, so React state is never written while scrolling. Under `prefers-reduced-motion` the canvas is replaced by a single still and the steps become an ordinary two column list.
+### The Assembly Stage
+The signature component, and the only place the system spends its motion budget. One pinned section carries both the hero and the bake. A contained square stage, never wider than 45vw and capped at 520px, holds a plate on a sand ground; the stage opens on a photograph of the finished cake. As the section starts to move that photograph rises away and hands the square over to the diagram underneath: the cake is built on the plate a layer at a time, each layer swelling from its own bottom edge into place and staying there, under a contact shadow that deepens as the stack grows. Once the last layer is on, the diagram goes and the photograph rises back, so the section closes on the same cake it opened with, now explained. The text column beside it cross fades from headline, to a vertical step list with a hairline progress line, to a closing line and the order CTA.
+
+The rules the component keeps: nothing goes full screen, whitespace survives at every scroll position, and the cake is only ever added to, never swapped for another picture. Scroll enters once through `useScroll` and is divided by `useAssemblyProgress`, so every layer reads its own eased slice of one shared value and React state is never written while scrolling. Under `prefers-reduced-motion` the pin is dropped and the finished cake sits beside a plain list of the steps.
 
 ## Do's and Don'ts
 

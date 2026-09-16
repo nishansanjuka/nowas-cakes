@@ -98,27 +98,10 @@ for (const item of read("portfolio.json")) {
 
 for (const r of read("reviews.json")) write(r.avatar.src, 200, 200, seed++, 0.05);
 
-const brand = read("brand.json");
-write(brand.heroImage.src, 1400, 1750, 3);
-write(brand.portrait.src, 1200, 1500, 1);
+write(read("brand.json").portrait.src, 1200, 1500, 1);
 
-/** Frames walk from cool flour tones to the warm finished cake. */
-const sequence = read("baking-sequence.json");
-sequence.frames.forEach((src, i) => {
-  const t = i / (sequence.frames.length - 1);
-  const from = [240, 234, 225];
-  const to = [201, 152, 138];
-  const [r, g, b] = mix(from, to, t);
-  const file = join(publicDir, src);
-  mkdirSync(dirname(file), { recursive: true });
-  writeFileSync(
-    file,
-    png(1200, 750, (u, v) => {
-      const d = Math.hypot(u - 0.5, v - 0.55) * 1.414;
-      const lift = 1 - 0.22 * d * d + 0.04 * Math.sin((i / 6 + v * 3) * Math.PI);
-      return [r, g, b].map((c) => Math.max(0, Math.min(255, Math.round(c * lift))));
-    }),
-  );
-});
+// The cake layers are deliberately not written here. A layer wants a
+// transparent cutout, and a flat rectangle standing in for one would read as a
+// real layer; the stage draws its own neutral block when the file is absent.
 
-console.log(`Wrote ${seed + 2 + sequence.frames.length} placeholder images into /public.`);
+console.log(`Wrote ${seed + 1} placeholder images into /public.`);

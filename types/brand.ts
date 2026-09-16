@@ -18,6 +18,7 @@ export interface Brand {
   tagline: string;
   heroHeadline: string;
   heroSubtext: string;
+  /** The finished cake the landing stage opens on. */
   heroImage: {
     src: string;
     alt: string;

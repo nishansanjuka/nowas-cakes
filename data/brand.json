@@ -5,8 +5,8 @@
   "heroHeadline": "Cakes made slowly, by one pair of hands.",
   "heroSubtext": "Celebration and custom cakes baked to order in a small studio kitchen.",
   "heroImage": {
-    "src": "/images/hero/finished-cake.png",
-    "alt": "A three layer cake finished in pale buttercream, set on a linen covered table"
+    "src": "/images/hero/finished-cake.jpg",
+    "alt": "A single tier cake in pale buttercream, pressed with dried chamomile, sage and wild grasses, on a stoneware stand"
   },
   "intro": "I am Nowa. I bake one cake at a time, in a studio kitchen with north light and a very old stand mixer.",
   "bio": [
@@ -16,7 +16,7 @@
   ],
   "philosophy": "A cake should taste of the thing it is named after. Vanilla should smell like a split pod, lemon should make you close one eye. I buy fewer ingredients and better ones, I weigh everything, and I never decorate over a fault. If a layer is wrong it does not leave the kitchen.",
   "portrait": {
-    "src": "/images/about/nowa-portrait.png",
+    "src": "/images/about/nowa-portrait.jpg",
     "alt": "Nowa in her studio kitchen, sleeves rolled, resting one hand on a bowl of buttercream"
   },
   "contact": {

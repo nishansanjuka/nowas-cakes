@@ -1,0 +1,67 @@
+[
+  {
+    "id": "sponge-base",
+    "order": 0,
+    "label": "The base",
+    "caption": "A cooled sponge, levelled flat.",
+    "material": "Vanilla sponge",
+    "image": {
+      "src": "/layers/sponge-base.webp",
+      "alt": "A round vanilla sponge layer resting on a pale cake plate",
+      "width": 900,
+      "height": 260
+    }
+  },
+  {
+    "id": "filling",
+    "order": 1,
+    "label": "The filling",
+    "caption": "Vanilla cream, out to the edge.",
+    "material": "Vanilla bean cream",
+    "image": {
+      "src": "/layers/filling.webp",
+      "alt": "A band of vanilla bean cream spread across a sponge layer",
+      "width": 860,
+      "height": 130
+    }
+  },
+  {
+    "id": "sponge-top",
+    "order": 2,
+    "label": "The second sponge",
+    "caption": "Laid on cold, so nothing slides.",
+    "material": "Vanilla sponge",
+    "image": {
+      "src": "/layers/sponge-top.webp",
+      "alt": "A second vanilla sponge layer placed over the cream",
+      "width": 900,
+      "height": 260
+    }
+  },
+  {
+    "id": "frosting",
+    "order": 3,
+    "label": "The frosting",
+    "caption": "Buttercream pulled until still.",
+    "material": "Swiss buttercream",
+    "image": {
+      "src": "/layers/frosting.webp",
+      "alt": "A smooth coat of pale buttercream wrapped around the stacked cake",
+      "width": 940,
+      "height": 150
+    }
+  },
+  {
+    "id": "decoration",
+    "order": 4,
+    "label": "The finish",
+    "caption": "Fruit from that morning, placed once.",
+    "material": "Fruit, peony",
+    "image": {
+      "src": "/layers/decoration.webp",
+      "alt": "Fresh berries and a single white peony crowning the finished cake",
+      "width": 620,
+      "height": 210
+    }
+  }
+]
